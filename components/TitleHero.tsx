@@ -1,6 +1,7 @@
 "use client";
 import React from 'react'
 import { motion } from "motion/react"
+import Titles from './Titles';
 
 const Photo = () => {
   const circleColors = ["#0056B375", "#0056B3", "#4D99FF", "#3399FF", "#3399CC", "#66BFFF", "#B3D8FF", "#FFFFFF" ];
@@ -37,14 +38,14 @@ const Photo = () => {
     <div className='w-full h-full relative flex items-center justify-center'>
       <motion.div initial={{opacity:0}} animate={{opacity:1, transition:{delay:0.8, duration: 0.4, ease: "easeIn"}}} className='relative'>
         <motion.div initial={{opacity:0}} animate={{opacity:1, transition:{delay:0.9, duration:0.4, ease:"easeInOut"}}} className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10'>
-          <div className='w-[250px] h-[250px] lg:w-[500px] lg:h-[520px] mix-blend-lighten overflow-hidden rounded-full'>
+          <div className='w-[250px] h-[250px] lg:w-[400px] lg:h-[420px] mix-blend-lighten overflow-hidden rounded-full'>
             <div className='flex flex-col items-center justify-center w-full h-full'> 
               <h1 className="text-lightSky text-5xl md:text-5xl tracking-normal ">Ben Allen</h1>
-              <h2 className="text-2xl mb-2 lg:text-3xl text-white">Software Developer</h2>
+              <Titles />
             </div>
           </div>
         </motion.div>
-        <svg className='w-[500px] lg:w-[625px] h-[500px] lg:h-[625px] mb-8 md:mb-0' viewBox='0 0 506 506' fill="none" xmlns='http"//www.w3.org/2000/svg'>
+        <svg className='w-[500px] lg:w-[525px] h-[500px] lg:h-[525px] mb-8 md:mb-0' viewBox='0 0 506 506' fill="none" xmlns='http"//www.w3.org/2000/svg'>
           {circleColors?.map((color,index)=>(
             <motion.circle 
                 key={index} 

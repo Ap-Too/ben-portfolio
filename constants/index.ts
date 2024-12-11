@@ -1,7 +1,7 @@
 
 export const navbarData = [
     { title: "Home", href:"/"},
-    { title: "Resume", href:"/resume"},
+    { title: "Work", href:"/work"},
     { title: "Projects", href:"/projects"},
 ]
 const today = new Date();
