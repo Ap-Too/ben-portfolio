@@ -6,7 +6,8 @@ import { navbarData } from "@/constants"
 import { usePathname } from "next/navigation"
 import Sidebar from "./Sidebar";
 import { useState } from "react";
-import { Download, EllipsisVertical } from "lucide-react";
+import { Download, EllipsisVertical, Mail } from "lucide-react";
+
 
 const Header = () => {
   const pathname = usePathname();
@@ -28,6 +29,11 @@ const Header = () => {
                       Download CV <Download/>
                     </div>
                 </Link>
+                <a href="mailto:ben.allen.02.11@gmail.com" className="text-sm bg-lightSky/10 px-4 py-2 rounded-md border border-hoverColor/10 hover:border-hoverColor hover:bg-hoverColor hover:text-black hoverEffect h-[42px]">
+                    <div className="flex gap-2 m-auto items-center justify-center">
+                      CONTACT ME <Mail />
+                    </div>
+                </a>
             </div>
             <button aria-label="Toggle menu" onClick={() => setIsSidebarOpen(!isSidebarOpen)}
                     className="inline-flex md:hidden relative hover:text-hoverColor hoverEffect">

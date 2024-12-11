@@ -1,5 +1,5 @@
 import { useOutsideClick } from '@/hooks/use-outside-click';
-import { Download, X } from 'lucide-react';
+import { Download, X, Mail } from 'lucide-react';
 import React from 'react'
 import Logo from './Logo'
 import { navbarData } from '@/constants';
@@ -24,7 +24,7 @@ const Sidebar:React.FC<Props> = ({isOpen, onClose, pathname}) => {
                 </button>
             </div>
             <nav className='flex flex-col px-5 gap-7 text-sm uppercase tracking-wide font-medium mt-2'>
-                <Logo title="Ben " subtitle='A'/>
+                <Logo title="Ben " subtitle='Allen'/>
                 {navbarData?.map((item)=> (
                     <Link key={item?.title} href={item?.href} className={`hover:text-hoverColor hoverEffect ${pathname === item?.href && "text-hoverColor}"}`} onClick={onClose}>
                         {item?.title}
@@ -32,11 +32,16 @@ const Sidebar:React.FC<Props> = ({isOpen, onClose, pathname}) => {
                 ))}
                 <Link href={'/resume.pdf'} target="_blank" rel="noopener noreferrer" className="text-sm bg-lightSky/10 px-4 py-2 rounded-md border
                    border-hoverColor/10 hover:border-hoverColor hover:bg-hoverColor hover:text-black text-center hoverEffect">
-                  <div className="flex gap-2 m-auto items-center justify-center">
-                      Download CV <Download />
+                    <div className="flex gap-2 m-auto items-center justify-center">
+                        Download CV <Download />
                     </div>
                 </Link>
-                <div className='absolute bottom-0 items-center justify-center'>
+                <a href="mailto:ben.allen.02.11@gmail.com" className="text-sm bg-lightSky/10 px-4 py-2 rounded-md border border-hoverColor/10 hover:border-hoverColor hover:bg-hoverColor hover:text-black hoverEffect h-[42px]">
+                    <div className="flex gap-2 m-auto items-center justify-center">
+                      CONTACT ME <Mail />
+                    </div>
+                </a>
+                <div className='flex items-center justify-center'>
                     <SocialLinks/>
                 </div>
             </nav>
