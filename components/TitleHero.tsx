@@ -35,8 +35,8 @@ const Photo = () => {
   }
   return (
     <div className='w-full h-full relative flex items-center justify-center'>
-      <motion.div initial={{opacity:0}} animate={{opacity:1, transition:{delay:0.3, duration: 0.4, ease: "easeIn"}}} className='relative'>
-        <motion.div initial={{opacity:0}} animate={{opacity:1, transition:{delay:0.5, duration:0.4, ease:"easeInOut"}}} className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10'>
+      <motion.div initial={{opacity:0}} animate={{opacity:1, transition:{delay:0.8, duration: 0.4, ease: "easeIn"}}} className='relative'>
+        <motion.div initial={{opacity:0}} animate={{opacity:1, transition:{delay:0.9, duration:0.4, ease:"easeInOut"}}} className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10'>
           <div className='w-[250px] h-[250px] lg:w-[500px] lg:h-[520px] mix-blend-lighten overflow-hidden rounded-full'>
             <div className='flex flex-col items-center justify-center w-full h-full'> 
               <h1 className="text-lightSky text-5xl md:text-5xl tracking-normal ">Ben Allen</h1>

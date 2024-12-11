@@ -13,7 +13,7 @@ const Header = () => {
   const pathname = usePathname();
   const [isSidebarOpen,setIsSidebarOpen] = useState(false);
   return (
-    <header className='bg-bodyColor text-white/80'>
+    <header className='bg-bodyColor text-white/80 sticky top-0 z-50'>
         <Container className='py-5 flex items-center justify-between '>
             <Logo title="Ben " subtitle="Allen"/>
             <div className="hidden md:inline-flex items-center gap-7 text-sm uppercase tracking-wide font-medium">
@@ -46,6 +46,7 @@ const Header = () => {
                      pathname={pathname}/>
         </div>}
     </header>
+    
   )
 }
 

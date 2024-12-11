@@ -6,23 +6,29 @@ import Statistics from "@/components/Statistics";
 
 export default function Home() {
   return (
-    <div className="bg-bodyColor text-white/80">
+    <div className="bg-bodyColor max-h-screen text-white/80">
     <Container className="py-10 grid grid-cols-1">
       <TitleHero />
-      <div className="flex flex-col items-center gap-5 md:gap-8 text-center md:text-start md:mt-16">
-        <Statistics />
-        <p className="w-auto md:max-w-[800px] text-white/50 font-thin leading-6">
-          I am a software developer with experience in a variety of programming languages and technologies, including object-oriented programming, web development, and database design.
-        </p>
-        <p className="w-auto md:max-w-[800px] text-white/50 font-thin leading-6">
-          As a recent graduate of the Computer Programming and Analysis program at Niagara College. During my time in the program, I have gained hands-on experience in team-based development, object-oriented programming, and building functional programs, web pages and databases.
-        </p>
-        <p className="w-auto md:max-w-[800px] text-white/50 font-thin leading-6">
-        In my free time, I enjoy exploring new technologies through personal coding projects, deepening my understanding of software development principles, and staying informed by reading industry-related articles and books.
-        </p>
-        <SocialLinks/>
+      <div className="flex flex-col gap-5 md:gap-8 md:mt-16">
+        <div className="flex flex-row items-center justify-center">
+          <Statistics />
+        </div>
+        <div className="flex flex-col items-center gap-5 md:gap-8 text-center">
+          <p className="w-auto md:max-w-[800px] text-white/50 font-thin leading-6">
+            I am a dedicated software developer with expertise in object-oriented programming, web development, and database design. 
+          </p>
+          <p className="w-auto md:max-w-[800px] text-white/50 font-thin leading-6">
+            As a graduate of Niagara College&apos;s Computer Programming and Analysis program, I have acquired hands-on experience in collaborative development, crafting functional software, and designing efficient web applications and databases.
+          </p>
+          <p className="w-auto md:max-w-[800px] text-white/50 font-thin leading-6">
+            Outside of work, I actively expand my technical knowledge through personal coding projects and stay current with industry advancements by engaging with professional literature and resources.
+          </p>
+        </div>
       </div>
     </Container>
+    <div className="sticky bottom-8">
+      <SocialLinks/>
+    </div>
   </div>
     // <div className="bg-bodyColor text-white/80">
     //   <Container className="py-10 grid grid-cols-1 md:grid-cols-2 gap-10">

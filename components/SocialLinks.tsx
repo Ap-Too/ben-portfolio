@@ -12,7 +12,7 @@ const SocialLinks = () => {
   return (
     <TooltipProvider>
         <div>
-            <div className='flex items-center justify-center gap-3'>
+            <div className='flex items-center md:items-end justify-center md:justify-end md:mr-8 gap-3'>
                 {socialData?.map((item)=>(
                     <Tooltip key={item?.title}>
                         <TooltipTrigger asChild>

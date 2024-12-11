@@ -1,11 +1,11 @@
 import React from 'react'
 
-const page = () => {
+const ResumePage = () => {
   return (
     <div>
-      
+      Resume Page
     </div>
   )
 }
 
-export default page
+export default ResumePage
