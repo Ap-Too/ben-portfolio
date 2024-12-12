@@ -14,6 +14,7 @@ import { projects } from '@/constants';
 
 
 const ProjectPage = () => {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [currentIndex, setCurrentIndex]=useState(0)
   const handleSlideChange=(index:number)=>{
     setCurrentIndex(index)
