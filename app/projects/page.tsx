@@ -11,7 +11,6 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Separator } from '@/components/ui/separator';
 import { projects } from '@/constants';
-import SocialLinks from '@/components/SocialLinks';
 
 
 const ProjectPage = () => {
@@ -20,7 +19,7 @@ const ProjectPage = () => {
     setCurrentIndex(index)
   }
   return (
-    <div className='py-6 md:py-12'>
+    <div className='py-4'>
       <PageLayout>
         <Carousel opts={{align:'start', loop: true}}
                   className="w-full" onSelect={()=>{
@@ -39,18 +38,38 @@ const ProjectPage = () => {
                         {/* description */}
                         <div className='w-full md:w-1/2 order-2 md:order-1 mb-8 md:mb-0'>
                           <div className='space-y-3 md:space-y-6 mt-4 md:mt-0 md:mb-auto'>
-                            <h2 className='text-4xl md:text-8xl leading-none font-extrabold text-white'>
-                              {project?.id}
-                            </h2>
                             <h3 className='text-xl md:text-3xl font-bold leading-none text-white/80 group-hover:text-lightSky hoverEffect'>
                               {project?.title} 
                             </h3>
                             <span className='text-normal md:text-xl font-semibold leading-none text-white/60'>
                               {project?.category} project
                             </span>
-                            <p className='text-white/60 text-sm md:text-base leading-6 md:leading-normal '>
+                            <div className='grid-flow-row md:flex flex-row items-center justify-start  md:mt-7 md:order-2'>
+                              {project?.stack?.map((item,index)=>(
+                                <Badge key={index} 
+                                    className='text-white/80 text-md rounded-md min-w-[80px] justify-center items-start'>
+                                  {item}
+                                </Badge>
+                              ))}
+                            </div>
+                            <p className='text-white/60 text-sm md:text-base leading-6 md:leading-normal ml-4'>
                               {project?.description}
                             </p>
+                            <h4 className='text-2xl font-medium my-4 text-white'>Challenges</h4>
+                            <dl className='ml-4'>
+                              {project?.challenges?.map((item,index)=>(
+                                <div key={index}>
+                                  <dt className='text-white/80'>
+                                    {item.title}
+                                  </dt>
+                                  <dd className='text-muted-foreground ml-2 mt-2'>{item?.details?.map((detail, i)=>(
+                                    <div key={i} className='my-2'>
+                                      {detail}
+                                    </div>
+                                  ))}</dd>
+                                </div>
+                              ))}
+                            </dl>
                           </div>
                           <Separator className='bg-white/20' />
                         </div>
@@ -66,8 +85,12 @@ const ProjectPage = () => {
                           <Tooltip>
                             <TooltipTrigger asChild>
                               <Button className='bg-lightSky/5 text-white/80 border border-lightSky/20 hover:border-lightSky hover:text-hoverColor hoverEffect mr-auto mt-4 md:mt-7 order-2 md:order-1'>
-                                <Link href={project?.detailURL} >
-                                  <ArrowUpRight />{" "} <span className='sr-only'>Details</span>
+                                <Link href={project?.detailURL} target="_blank" >
+                                <div className='flex flex-row gap-2'>
+                                  {project?.tip}
+                                  <ArrowUpRight />
+                                </div>
+                                   <span className='sr-only'>Details</span>
                                 </Link>
                               </Button>
                             </TooltipTrigger>
@@ -75,27 +98,7 @@ const ProjectPage = () => {
                               <p>{project?.tip}</p>
                             </TooltipContent>
                           </Tooltip>
-                          {/* <Tooltip>
-                            <TooltipTrigger asChild>
-                              <Button className='bg-lightSky/5 text-white/80 border border-lightSky/20 hover:border-lightSky hover:text-hoverColor hoverEffect mr-auto mt-4 md:mt-7 order-2 md:order-1'>
-                                <Link href={project?.detailURL} >
-                                  <ArrowUpRight />{" "} <span className='sr-only'>Details</span>
-                                </Link>
-                              </Button>
-                            </TooltipTrigger>
-                            <TooltipContent className='bg-white text-black font-semibold'>
-                              <p>View Details Page</p>
-                            </TooltipContent>
-                          </Tooltip> */}
                         </TooltipProvider>
-                        <div className='grid-flow-row md:flex flex-row gap-2 items-center justify-end  md:mt-7 overflow-clip md:order-2'>
-                          {project?.stack?.map((item,index)=>(
-                            <Badge key={index} 
-                                className='bg-hoverColor/30 text-lightSky/80 border border-lightSky/30 p-2.5 rounded-full hover:bg-lightSky/10 hover:border-lightSky hoverEffect min-w-[100px] justify-center items-center m-1'>
-                              {item}
-                            </Badge>
-                          ))}
-                        </div>
                       </div>
                     </CardContent>
                   </Card>
@@ -103,14 +106,11 @@ const ProjectPage = () => {
               ))
             }
           </CarouselContent>
-          <div className='absolute -bottom-8 right-1/2'>
+          <div className=''>
             <CarouselPrevious className='rounded-md bg-transparent border border-lightSky/20 hover:bg-hoverColor/20 hover:text-white hover:border-hoverColor p-5 hoverEffect'/>
             <CarouselNext className='rounded-md bg-transparent border border-lightSky/20 hover:bg-hoverColor/20 hover:text-white hover:border-hoverColor p-5 hoverEffect' />
           </div>
         </Carousel>
-        <div className="sticky bottom-0 hidden md:block mt-6">
-          <SocialLinks/>
-        </div>
       </PageLayout>
     </div>
   )

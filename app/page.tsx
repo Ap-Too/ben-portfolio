@@ -1,6 +1,5 @@
 import Container from "@/components/Container";
 import TitleHero from "@/components/TitleHero";
-import SocialLinks from "@/components/SocialLinks";
 import Skills from "@/components/Skills";
 // import Photo from "@/components/Photo";
 // import Statistics from "@/components/Statistics";
@@ -28,9 +27,6 @@ export default function Home() {
         <div className="pb-8 order-2 md:order-none">
           <Skills />
         </div>
-      </div>
-      <div className="sticky bottom-8 hidden md:block left-full">
-        <SocialLinks/>
       </div>
     </Container>
   </div>

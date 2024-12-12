@@ -9,9 +9,9 @@ interface Props {
 }
 const logo = ({className, title, subtitle}: Props) => {
   return (
-    <div className="text-2xl group">
+    <div className="group">
         <Link href={'/'}>
-            <h2 className={cn("font-semibold tracking-wide text-2xl hover:text-hoverColor hoverEffect",className)}>
+            <h2 className={cn("font-semibold tracking-wide text-3xl hover:text-hoverColor hoverEffect mt-2",className)}>
                 {title}
                 <span className="text-lightSky group-hover:text-white hoverEffect">
                     {subtitle}

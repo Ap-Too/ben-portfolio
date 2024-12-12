@@ -7,6 +7,7 @@ import { usePathname } from "next/navigation"
 import Sidebar from "./Sidebar";
 import { useState } from "react";
 import { Download, EllipsisVertical, Mail } from "lucide-react";
+import SocialLinks from "./SocialLinks";
 
 
 const Header = () => {
@@ -15,7 +16,12 @@ const Header = () => {
   return (
     <header className='bg-bodyColor text-white/80 sticky top-0 z-50'>
         <Container className='py-5 flex items-center justify-between '>
+          <div className="flex flex-row gap-6">
             <Logo title="Ben " subtitle="Allen"/>
+            <div>
+              <SocialLinks className=''/>
+            </div>
+          </div>
             <div className="hidden md:inline-flex items-center gap-7 text-sm uppercase tracking-wide font-medium">
                 {navbarData?.map((item)=>(
                   <Link key={item?.title} href={item?.href} className={`hover:text-hoverColor hoverEffect relative group overflow-x-hidden ${pathname === item?.href && 'text-hoverColor'}`}>
