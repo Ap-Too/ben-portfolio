@@ -6,7 +6,7 @@ import StairTransition from "@/components/StairTransition";
 
 export const metadata: Metadata = {
   title: "Ben Allen",
-  description: "Software DEveloper",
+  description: "Software Developer",
 };
 
 export default function RootLayout({
