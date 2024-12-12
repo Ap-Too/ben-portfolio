@@ -6,7 +6,7 @@ import { IoLogoJavascript } from "react-icons/io5";
 const Skills = () => {
   return (
     <div>
-        <h3 className="flex items-center justify-center text-xl pb-8">Skills</h3>
+        <h3 className="flex items-center justify-center text-xl pb-6">Programming Languages</h3>
         <div className="flex flex-row items-center justify-center gap-5 md:gap-7">
         <FaJava className="w-10 h-10"/>
         <IoLogoJavascript className="w-10 h-10"/>

@@ -22,14 +22,13 @@ const SocialLinks = () => {
                                 </Link>
                             </div>
                         </TooltipTrigger>
-                        <TooltipContent className='bg-hoverColor text-black font-semibold'>
+                        <TooltipContent className='bg-white text-black font-semibold'>
                             {item?.title}
                         </TooltipContent>
                     </Tooltip>
                 ))}
             </div>
         </div>
-        
     </TooltipProvider>
   )
 }

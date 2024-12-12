@@ -8,13 +8,13 @@ import Skills from "@/components/Skills";
 export default function Home() {
   return (
     <div className="bg-bodyColor max-h-screen text-white/80">
-    <Container className="grid grid-cols-1 md:grid-cols-2">
+    <Container className="grid grid-cols-1 md:grid-cols-2 gap-y-4 lg:gap-y-0">
       <TitleHero />
       <div className="flex flex-col gap-5 md:gap-8 md:mt-16">
         {/* <div className="flex flex-row items-center justify-center mt-20">
           <Statistics />
         </div> */}
-        <div className="flex flex-col items-center gap-5 md:gap-8 text-center">
+        <div className="flex flex-col items-center gap-5 md:gap-8 text-center order-3 md:order-none">
           <p className="w-auto md:max-w-[800px] text-white/50 text-[18px] leading-6">
             I am a dedicated software developer with expertise in object-oriented programming, web development, and database design. 
           </p>
@@ -25,12 +25,14 @@ export default function Home() {
             Outside of work, I actively expand my technical knowledge through personal coding projects and stay current with industry advancements by engaging with professional literature and resources.
           </p>
         </div>
-        <Skills />
+        <div className="pb-8 order-2 md:order-none">
+          <Skills />
+        </div>
+      </div>
+      <div className="sticky bottom-8 hidden md:block left-full">
+        <SocialLinks/>
       </div>
     </Container>
-    <div className="sticky bottom-8 hidden md:block">
-      <SocialLinks/>
-    </div>
   </div>
     // <div className="bg-bodyColor text-white/80">
     //   <Container className="py-10 grid grid-cols-1 md:grid-cols-2 gap-10">

@@ -18,11 +18,11 @@ const Titles = () => {
     }, []);
 
   return (
-    <div className="relative overflow-hiddens h-10">
+    <div className="relative overflow-hidden h-10">
         <AnimatePresence mode="wait">
             <motion.h2
                     key={jobTitles[currentTitle]}
-                    className="text-2xl font-semibold text-center"
+                    className="text-2xl font-semibold"
                     initial={{ 
                         y: "40%",
                         opacity: 0
