@@ -107,7 +107,11 @@ const ProjectPage = () => {
               ))
             }
           </CarouselContent>
-          <div className=''>
+          <div className='hidden lg:block'>
+            <CarouselPrevious className='rounded-md bg-transparent border border-lightSky/20 hover:bg-hoverColor/20 hover:text-white hover:border-hoverColor p-5 hoverEffect'/>
+            <CarouselNext className='rounded-md bg-transparent border border-lightSky/20 hover:bg-hoverColor/20 hover:text-white hover:border-hoverColor p-5 hoverEffect' />
+          </div>
+          <div className='absolute -bottom-8 right-12 lg:hidden'>
             <CarouselPrevious className='rounded-md bg-transparent border border-lightSky/20 hover:bg-hoverColor/20 hover:text-white hover:border-hoverColor p-5 hoverEffect'/>
             <CarouselNext className='rounded-md bg-transparent border border-lightSky/20 hover:bg-hoverColor/20 hover:text-white hover:border-hoverColor p-5 hoverEffect' />
           </div>

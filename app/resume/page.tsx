@@ -87,7 +87,7 @@ const ResumePage = () => {
       <PageLayout>
         <div className='py-6 md:py-12 flex flex-col md:flex-row gap-6 md:gap-14'>
           {/* Sticky Name and info */}
-          <div className='flex flex-row gap-6'>
+          <div className='flex flex-col lg:flex-row gap-6'>
             <div className='w-full flex flex-col gap-4 md:gap-8'>
               <Logo className="text-6xl" title="Ben " subtitle="Allen"/>
               <div className='flex flex-row gap-4'>
